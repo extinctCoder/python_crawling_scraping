@@ -9,7 +9,7 @@ class BookSpider(scrapy.Spider):
     def parse(self, response):
         books = response.css("article.product_pod")
         for book in books:
-            relative_url = response.css("h3 a ::attr(href)").get()
+            relative_url = book.css("h3 a ::attr(href)").get()
             if relative_url is not None:
                 if "catalogue/" in relative_url:
                     book_url = "https://books.toscrape.com/" + relative_url
