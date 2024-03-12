@@ -27,4 +27,5 @@ class BookSpider(scrapy.Spider):
             yield response.follow(next_page_url, callback=self.parse)
 
     def parse_book(self, response):
-        pass
+        table_rows = response.css("table tr")
+        yield {"url": response.url}
