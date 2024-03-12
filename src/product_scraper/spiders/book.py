@@ -9,14 +9,14 @@ class BookSpider(scrapy.Spider):
     def parse(self, response):
         books = response.css("article.product_pod")
         for book in books:
-            book_url = response.css("h3 a ::attr(href)").get()
-            if book_url is not None:
+            relative_url = response.css("h3 a ::attr(href)").get()
+            if relative_url is not None:
                 if "catalogue/" in next_page:
-                    next_page_url = "https://books.toscrape.com/" + next_page
+                    book_url = "https://books.toscrape.com/" + relative_url
                 else:
-                    next_page_url = "https://books.toscrape.com/catalogue/" + next_page
+                    book_url = "https://books.toscrape.com/catalogue/" + relative_url
 
-                yield response.follow(next_page_url, callback=self.parse_book)
+                yield response.follow(book_url, callback=self.parse_book)
             # yield {
             #     "name": book.css("h3 a::text").get(),
             #     "price": book.css(".product_price .price_color::text").get(),
