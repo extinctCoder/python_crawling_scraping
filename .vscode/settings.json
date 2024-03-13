@@ -1,9 +1,16 @@
 {
   "cSpell.words": [
+    "asyncioreactor",
+    "autothrottle",
     "Bookspider",
     "dhpxhu",
+    "FINGERPRINTER",
+    "HTTPCACHE",
     "itemadapter",
+    "NEWSPIDER",
+    "ROBOTSTXT",
     "scrapeops",
+    "TELNETCONSOLE",
     "toscrape"
   ],
   "gitdoc.enabled": true

@@ -44,9 +44,10 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    "product_scraper.middlewares.ProductScraperSpiderMiddleware": 543,
-# }
+SPIDER_MIDDLEWARES = {
+    #    "product_scraper.middlewares.ProductScraperSpiderMiddleware": 543,
+    "product_scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
+}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
