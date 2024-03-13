@@ -44,17 +44,16 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-    #    "product_scraper.middlewares.ProductScraperSpiderMiddleware": 543,
-    "product_scraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 543,
-    # "product_scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
-}
+# SPIDER_MIDDLEWARES = {
+#     "product_scraper.middlewares.ProductScraperSpiderMiddleware": 543,
+# }
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    "product_scraper.middlewares.ProductScraperDownloaderMiddleware": 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+    #    "product_scraper.middlewares.ProductScraperDownloaderMiddleware": 543,
+    "product_scraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
+}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
