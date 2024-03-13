@@ -238,13 +238,14 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
         payload = {"api_key": self.scrapeops_api_key}
         if self.scrapeops_num_results is not None:
             payload["num_results"] = self.scrapeops_num_results
-        response = requests.get(self.scrapeops_endpoint, params=urlencode(payload))
-        json_response = response.json()
-        self.headers_list = json_response.get("result", [])
+        self.headers_list = (
+            requests.get(self.scrapeops_endpoint, params=urlencode(payload))
+            .json()
+            .get("result", [])
+        )
 
     def _get_random_browser_header(self):
-        random_index = randint(0, len(self.headers_list) - 1)
-        return self.headers_list[random_index]
+        return self.headers_list[randint(0, len(self.headers_list) - 1)]
 
     def _scrapeops_fake_browser_headers_enabled(self):
         if (
@@ -258,7 +259,6 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
 
     def process_request(self, request, spider):
         random_browser_header = self._get_random_browser_header()
-
         request.headers["accept-language"] = random_browser_header["accept-language"]
         request.headers["sec-fetch-user"] = random_browser_header["sec-fetch-user"]
         request.headers["sec-fetch-mod"] = random_browser_header["sec-fetch-mod"]
@@ -274,5 +274,5 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
             "upgrade-insecure-requests"
         )
 
-        print("************ NEW HEADER ATTACHED *******")
+        print("************ NEW FAKE BROWSER HEADER ATTACHED *******")
         print(request.headers)
