@@ -141,4 +141,14 @@ class ScrapeOpsFakeUserAgentMiddleware:
         return self.user_agents_list[random_index]
 
     def _scrapeops_fake_user_agents_enabled(self):
-        pass
+        if (
+            self.scrapeops_api_key is None
+            or self.scrapeops_api_key is ""
+            or self.scrapeops_fake_user_agents_active is False
+        ):
+            self.scrapeops_fake_user_agents_active = False
+        else:
+            self.scrapeops_fake_user_agents_active = True
+
+    def process_request(self, request, spider):
+        random_user_agent = self._get_random_user_agent()
