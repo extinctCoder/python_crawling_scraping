@@ -216,7 +216,10 @@ class ScrapeOpsFakeUserAgentMiddleware:
 
     def process_request(self, request, spider):
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-        print("")
+        print("process_request(self, request, spider):")
+        print(
+            "888888888888888888888888888888888888888888888888888888888888888888888888888888888888"
+        )
         random_user_agent = self._get_random_user_agent()
         request.headers["User-Agent"] = random_user_agent
 

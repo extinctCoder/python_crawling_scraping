@@ -58,11 +58,11 @@ class BookSpider(scrapy.Spider):
     allowed_domains = ["books.toscrape.com"]
     start_urls = ["https://books.toscrape.com/"]
 
-    custom_settings = {
-        "FEEDS": {
-            "booksdata.json": {"format": "json", "overwrite": True},
-        }
-    }
+    # custom_settings = {
+    #     "FEEDS": {
+    #         "booksdata.json": {"format": "json", "overwrite": True},
+    #     }
+    # }
 
     def parse(self, response):
 
@@ -75,7 +75,8 @@ class BookSpider(scrapy.Spider):
                 book_url = "https://books.toscrape.com/" + relative_url
             else:
                 book_url = "https://books.toscrape.com/catalogue/" + relative_url
-            # yield response.follow(book_url, callback=self.parse_book_page)
+
+            yield response.follow(book_url, callback=self.parse_book_page)
 
         next_page = response.css("li.next a ::attr(href)").get()
         if next_page is not None:
@@ -89,6 +90,7 @@ class BookSpider(scrapy.Spider):
 
         table_rows = response.css("table tr")
         book_item = BookItem()
+        print("*********************************************************************")
 
         book_item["url"] = (response.url,)
         book_item["title"] = (response.css(".product_main h1::text").get(),)
