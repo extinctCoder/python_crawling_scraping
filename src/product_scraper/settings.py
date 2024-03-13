@@ -53,6 +53,7 @@ ROBOTSTXT_OBEY = False
 DOWNLOADER_MIDDLEWARES = {
     #    "product_scraper.middlewares.ProductScraperDownloaderMiddleware": 543,
     "product_scraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
+    "product_scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 401,
 }
 
 # Enable or disable extensions

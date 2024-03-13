@@ -201,8 +201,8 @@ class ScrapeOpsFakeUserAgentMiddleware:
     def _scrapeops_fake_user_agents_enabled(self):
         if (
             self.scrapeops_api_key is None
-            or self.scrapeops_api_key is ""
-            or self.scrapeops_fake_user_agents_active is False
+            or self.scrapeops_api_key == ""
+            or self.scrapeops_fake_user_agents_active == False
         ):
             self.scrapeops_fake_user_agents_active = False
         else:
