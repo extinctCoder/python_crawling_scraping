@@ -119,7 +119,7 @@ class ScrapeOpsFakeUserAgentMiddleware:
         self.scrapeops_api_key = settings.get("SCRAPEOPS_API_KEY")
         self.scrapeops_endpoint = settings.get(
             "SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT",
-            "https://headers.scrapeops.io/v1/browser-headers",
+            "https://headers.scrapeops.io/v1/user-agents",
         )
         self.scrapeops_fake_user_agents_active = settings.get(
             "SCRAPEOPS_FAKE_USER_AGENT_ENABLED", False
