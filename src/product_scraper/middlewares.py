@@ -113,3 +113,6 @@ class ScrapeOpsFakeUserAgentMiddleware:
     @classmethod
     def from_crawler(cls, crawler):
         return cls(crawler.settings)
+
+    def __init__(self, settings):
+        self.scrapeops_api_key = settings.get("SCRAPEOPS_API_KEY")
