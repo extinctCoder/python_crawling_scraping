@@ -9,6 +9,4 @@ class ProductSpider(scrapy.Spider):
     def parse(self, response):
         products = response.css("div.itemCardArea-cards.test-card.css-dhpxhu")
         for product in products:
-            yield {
-                'name':
-            }
+            yield {"name": product.css("div.articleDisplayCard-Title::text")}
