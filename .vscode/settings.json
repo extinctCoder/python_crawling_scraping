@@ -1,4 +1,10 @@
 {
-  "cSpell.words": ["Bookspider", "dhpxhu", "itemadapter", "toscrape"],
+  "cSpell.words": [
+    "Bookspider",
+    "dhpxhu",
+    "itemadapter",
+    "scrapeops",
+    "toscrape"
+  ],
   "gitdoc.enabled": true
 }
