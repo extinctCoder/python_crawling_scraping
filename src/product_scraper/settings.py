@@ -64,10 +64,10 @@ SPIDER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-    # "product_scraper.pipelines.ProductScraperPipeline": 300,
-    "product_scraper.pipelines.BookPipeline": 300,
-}
+# ITEM_PIPELINES = {
+#     # "product_scraper.pipelines.ProductScraperPipeline": 300,
+#     "product_scraper.pipelines.BookPipeline": 300,
+# }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
