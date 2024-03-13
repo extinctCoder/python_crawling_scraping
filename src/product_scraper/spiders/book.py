@@ -114,4 +114,4 @@ class BookSpider(scrapy.Spider):
         )
         book_item["price"] = (response.css("p.price_color ::text").get(),)
 
-        yield response.url
+        yield {"title": response.css(".product_main h1::text").get()}
