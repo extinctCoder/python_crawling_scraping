@@ -7,4 +7,8 @@ class ProductSpider(scrapy.Spider):
     start_urls = ["https://shop.adidas.jp/item/?gender=mens"]
 
     def parse(self, response):
-        products = response.css("itemCardArea-cards")
+        products = response.css("div.itemCardArea-cards.test-card.css-dhpxhu")
+        for product in products:
+            yield {
+                'name':
+            }
