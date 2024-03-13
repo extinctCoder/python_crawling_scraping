@@ -46,7 +46,7 @@ ROBOTSTXT_OBEY = False
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
     #    "product_scraper.middlewares.ProductScraperSpiderMiddleware": 543,
-    "product_scraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
+    "product_scraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 543,
     # "product_scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
 }
 

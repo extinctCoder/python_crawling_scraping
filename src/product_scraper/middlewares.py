@@ -166,3 +166,11 @@ class ScrapeOpsFakeUserAgentMiddleware:
         print("\n\n\n\n")
         print(request.headers)
         print("\n\n\n\n")
+
+    # def process_request(self, request, spider):
+    #     user_agents = [
+    #         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+    #         "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3",
+    #         # Add more user agents as needed
+    #     ]
+    #     request.headers["User-Agent"] = random.choice(user_agents)
