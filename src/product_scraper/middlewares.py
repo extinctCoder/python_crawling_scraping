@@ -162,10 +162,6 @@ import requests
 
 class ScrapeOpsFakeUserAgentMiddleware:
 
-    @classmethod
-    def from_crawler(cls, crawler):
-        return cls(crawler.settings)
-
     def process_request(self, request, spider):
         print("\n\n\n\n")
         print(request.headers)
