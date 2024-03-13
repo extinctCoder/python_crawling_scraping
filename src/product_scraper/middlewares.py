@@ -210,8 +210,8 @@ class ScrapeOpsFakeUserAgentMiddleware:
 
     def process_request(self, request, spider):
         request.headers["User-Agent"] = self._get_random_user_agent()
-        print("************ NEW FAKE USER_AGENT HEADER ATTACHED *******")
-        print(request.headers["User-Agent"])
+        # print("************ NEW FAKE USER_AGENT HEADER ATTACHED *******")
+        # print(request.headers["User-Agent"])
 
 
 class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
@@ -274,5 +274,5 @@ class ScrapeOpsFakeBrowserHeaderAgentMiddleware:
             "upgrade-insecure-requests"
         )
 
-        print("************ NEW FAKE BROWSER HEADER ATTACHED *******")
-        print(request.headers)
+        # print("************ NEW FAKE BROWSER HEADER ATTACHED *******")
+        # print(request.headers)
