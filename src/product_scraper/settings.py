@@ -17,7 +17,7 @@ NEWSPIDER_MODULE = "product_scraper.spiders"
 # USER_AGENT = "product_scraper (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
@@ -99,4 +99,4 @@ FEED_EXPORT_ENCODING = "utf-8"
 SCRAPEOPS_API_KEY = "819736af-3870-4b4d-964c-6cd5d92880b7"
 SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = "https://headers.scrapeops.io/v1/user-agents"
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
-SCRAPEOPS_NUM_RESULTS = 5
+SCRAPEOPS_NUM_RESULTS = 50
