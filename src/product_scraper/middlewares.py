@@ -191,14 +191,20 @@ class ScrapeOpsFakeUserAgentMiddleware:
         response = requests.get(self.scrapeops_endpoint, params=urlencode(payload))
         json_response = response.json()
         self.user_agents_list = json_response.get("result", [])
+        print(self.user_agents_list)
+        print("----------------------------------------")
 
     def _get_random_user_agent(self):
+        print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+        print("def _get_random_user_agent(self):")
+        print(self.user_agents_list)
+        print("----------------------------------------")
         random_index = randint(0, len(self.user_agents_list) - 1)
         return self.user_agents_list[random_index]
 
     def _scrapeops_fake_user_agents_enabled(self):
         print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
-        print("")
+        print("def _scrapeops_fake_user_agents_enabled(self):")
         if (
             self.scrapeops_api_key is None
             or self.scrapeops_api_key == ""
