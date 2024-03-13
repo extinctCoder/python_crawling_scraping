@@ -4,7 +4,7 @@ import scrapy
 class ProductSpider(scrapy.Spider):
     name = "product"
     allowed_domains = ["shop.adidas.jp"]
-    start_urls = ["https://shop.adidas.jp"]
+    start_urls = ["https://shop.adidas.jp/item/?gender=mens"]
 
     def parse(self, response):
-        pass
+        products = response.css("itemCardArea-cards")
