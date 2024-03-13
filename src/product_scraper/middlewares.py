@@ -153,3 +153,20 @@ class ProductScraperDownloaderMiddleware:
 #         request.headers["User-Agent"] = self._get_random_user_agent()
 #         print("************ NEW FAKE USER_AGENT HEADER ATTACHED *******")
 #         print(request.headers["User-Agent"])
+
+
+from urllib.parse import urlencode
+from random import randint
+import requests
+
+
+class ScrapeOpsFakeUserAgentMiddleware:
+
+    @classmethod
+    def from_crawler(cls, crawler):
+        return cls(crawler.settings)
+
+    def process_request(self, request, spider):
+        print("\n\n\n\n")
+        print(request.headers)
+        print("\n\n\n\n")
