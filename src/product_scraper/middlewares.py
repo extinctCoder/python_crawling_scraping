@@ -189,9 +189,11 @@ class ScrapeOpsFakeUserAgentMiddleware:
         payload = {"api_key": self.scrapeops_api_key}
         if self.scrapeops_num_results is not None:
             payload["num_results"] = self.scrapeops_num_results
-        response = requests.get(self.scrapeops_endpoint, params=urlencode(payload))
-        json_response = response.json()
-        self.user_agents_list = json_response.get("result", [])
+        self.user_agents_list = (
+            requests.get(self.scrapeops_endpoint, params=urlencode(payload))
+            .json()
+            .get("result", [])
+        )
 
     def _get_random_user_agent(self):
         random_index = randint(0, len(self.user_agents_list) - 1)
