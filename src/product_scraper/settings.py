@@ -64,9 +64,10 @@ SPIDER_MIDDLEWARES = {
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-# ITEM_PIPELINES = {
-#    "product_scraper.pipelines.ProductScraperPipeline": 300,
-# }
+ITEM_PIPELINES = {
+    # "product_scraper.pipelines.ProductScraperPipeline": 300,
+    "product_scraper.pipelines.BookPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -95,7 +96,7 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
 # Scrapeops Config
-SCRAPEOPS_NUM_RESULTS = 50
-SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
 SCRAPEOPS_API_KEY = "819736af-3870-4b4d-964c-6cd5d92880b7"
 SCRAPEOPS_FAKE_USER_AGENT_ENDPOINT = "https://headers.scrapeops.io/v1/user-agents"
+SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
+SCRAPEOPS_NUM_RESULTS = 5
