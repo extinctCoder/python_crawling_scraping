@@ -7,6 +7,7 @@ name = "pypi"
 scrapy = "*"
 ipython = "*"
 scrapy-rotating-proxies = "*"
+scrapyd = "*"
 
 [dev-packages]
 black = "*"
