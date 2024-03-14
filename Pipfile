@@ -9,6 +9,8 @@ ipython = "*"
 scrapy-rotating-proxies = "*"
 scrapyd = "*"
 scrapyd-client = "*"
+scrapydweb = "*"
+logparser = "*"
 
 [dev-packages]
 black = "*"
