@@ -11,6 +11,7 @@ scrapyd = "*"
 scrapyd-client = "*"
 scrapydweb = "*"
 logparser = "*"
+pywin32 = "*"
 
 [dev-packages]
 black = "*"

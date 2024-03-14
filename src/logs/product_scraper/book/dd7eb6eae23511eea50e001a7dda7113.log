@@ -1,0 +1,21 @@
+2024-03-15 01:05:48 [scrapy.utils.log] INFO: Scrapy 2.11.1 started (bot: product_scraper)
+2024-03-15 01:05:48 [scrapy.utils.log] INFO: Versions: lxml 5.1.0.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.9.0, w3lib 2.0.0, Twisted 24.3.0, Python 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)], pyOpenSSL 24.1.0 (OpenSSL 3.2.1 30 Jan 2024), cryptography 42.0.5, Platform Windows-10-10.0.22631-SP0
+2024-03-15 01:05:48 [scrapy.addons] INFO: Enabled addons:
+[]
+2024-03-15 01:05:48 [asyncio] DEBUG: Using selector: SelectSelector
+2024-03-15 01:05:48 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2024-03-15 01:05:48 [scrapy.utils.log] DEBUG: Using asyncio event loop: asyncio.windows_events._WindowsSelectorEventLoop
+2024-03-15 01:05:48 [scrapy.extensions.telnet] INFO: Telnet Password: d0d57a038a465bac
+2024-03-15 01:05:48 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2024-03-15 01:05:48 [scrapy.crawler] INFO: Overridden settings:
+{'BOT_NAME': 'product_scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_FILE': 'logs\\product_scraper\\book\\dd7eb6eae23511eea50e001a7dda7113.log',
+ 'NEWSPIDER_MODULE': 'product_scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'SPIDER_MODULES': ['product_scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'}
+2024-03-15 01:05:48 [urllib3.connectionpool] DEBUG: Starting new HTTP connection (1): headers.scrapeops.io:80
