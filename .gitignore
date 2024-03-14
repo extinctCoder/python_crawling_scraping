@@ -2,3 +2,4 @@ project.egg-info
 dbs
 eggs
 build
+logs
