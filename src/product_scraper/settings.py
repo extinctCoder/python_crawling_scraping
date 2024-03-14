@@ -54,8 +54,8 @@ DOWNLOADER_MIDDLEWARES = {
     #    "product_scraper.middlewares.ProductScraperDownloaderMiddleware": 543,
     # "product_scraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
     "product_scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
-    "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
-    "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
+    # "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
+    # "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
 }
 
 # Enable or disable extensions
