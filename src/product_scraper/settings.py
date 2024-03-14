@@ -54,6 +54,8 @@ DOWNLOADER_MIDDLEWARES = {
     #    "product_scraper.middlewares.ProductScraperDownloaderMiddleware": 543,
     # "product_scraper.middlewares.ScrapeOpsFakeUserAgentMiddleware": 400,
     "product_scraper.middlewares.ScrapeOpsFakeBrowserHeaderAgentMiddleware": 400,
+    "rotating_proxies.middlewares.RotatingProxyMiddleware": 610,
+    "rotating_proxies.middlewares.BanDetectionMiddleware": 620,
 }
 
 # Enable or disable extensions
@@ -104,3 +106,8 @@ SCRAPEOPS_FAKE_BROWSER_HEADER_ENDPOINT = (
 SCRAPEOPS_FAKE_USER_AGENT_ENABLED = True
 SCRAPEOPS_FAKE_BROWSER_HEADER_ENABLED = True
 SCRAPEOPS_NUM_RESULTS = 50
+ROTATING_PROXY_LIST = [
+    "proxy1.com:8000",
+    "proxy2.com:8031",
+    # ...
+]
